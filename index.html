@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AMzMzADtiyEA8seZACYWBQCCgoIAqKelAEdHRgBpaGgAIRIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKqqqgAAAACqVVVVqgAAClVVVVVVoAClVRETM1VaAKVRERMzNVoKVREREzMzVapVERETMzNVqIgRERMzM1WpmTMzMRERVaZmQzMxERFVp3dEMzEREVWgIiRDMREVVQAiIkQxEVVaAAIidphVVaAAACJ2mFWqAAAAAHaYqgAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA"
+        rel="icon" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>BMW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <section class="hero">
+                    <picture data-speed=".4">
+                        <source media="(max-width: 600px)" srcset="images/background-hero-mobile.png">
+                        <img src="images/background-hero.png" alt="">
+                    </picture>
+                    <picture class="bmw-image-hero">
+                        <img src="images/bmw_hero.png" alt="">
+                    </picture>
+
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <div class="container-fluid d-flex flex-wrap align-items-center">
+
+                            <a class="navbar-brand order-1" href="#">
+                                <svg class="logo-m-sport" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.8 192.8"
+                                    width="80">
+                                    <g fill-rule="evenodd">
+                                        <path fill="#33a0d1" d="M42 65h21l-33 60H9z" />
+                                        <path fill="#373485" d="M63 65h24l-33 60H30z" />
+                                        <path fill="#c52b30" d="M87 65h24l-33 60H54z" />
+                                        <path fill="#e6e6e7"
+                                            d="M118 65h22l1 27 15-27h19l2 60h-21V98l-14 27h-19V98l-14 27H85z" />
+                                    </g>
+                                </svg>
+                            </a>
+
+                            <div class="d-flex align-items-center gap-3 order-2 order-lg-3 ms-auto">
+                                <div class="nav-icons d-flex gap-3 text-white">
+                                    <i data-lucide="map-pin" style="cursor:pointer"></i>
+                                    <i data-lucide="search" style="cursor:pointer"></i>
+                                </div>
+
+                                <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#meuMenuBMW">
+                                    <i data-lucide="menu" style="color: white; width: 30px; height: 30px;"></i>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse order-3 order-lg-2" id="meuMenuBMW">
+                                <ul class="navbar-nav ms-lg-5 gap-3 gap-lg-4 pt-4 pt-lg-0">
+                                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link text-white" href="#">Store</a></li>
+                                    <li class="nav-item"><a class="nav-link text-white" href="#">Vehicles</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link text-white" href="#">Company</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+
+
+
+                    <div class="hero-superior">
+                        <div class="main-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="622" height="471" fill="none"
+                                viewBox="0 0 622 471">
+                                <path stroke="#fff"
+                                    d="M342 338v39h32l6 1 7 1 5 3 3 4 2 3 1 5 1 5-2 4-2 4-3 3-5 3-10 3-7 1h-8l-10-1-6-1-8-2-13-4-17-10-23 47c136 81 246-65 123-111l42-45v-39H296v48h81zM21 467V255h51l73 120 71-120h50l1 212h-57V359l-53 87h-27l-52-84v105z" />
+                                <path fill="#d9d9d9"
+                                    d="M1 48V1h188v47h-64v162H66V48zM211 211V1h59v79h82V1h59v209h-59v-81h-82v82zM453 211V1h165v46H512v35h93v44h-93v39h109v46z" />
+                                <path stroke="#fff"
+                                    d="M1 48V1h188v47h-64v162H66V48zM211 211V1h59v79h82V1h59v209h-59v-81h-82v82zM453 211V1h165v46H512v35h93v44h-93v39h109v46z" />
+                            </svg>
+                        </div>
+                        <div class="secondary-text">
+                            <div class="secondary-text-left">
+                                <span>|</span>
+                            </div>
+                            <div class="secondary-text-right">
+                                <h3 class="textSplit">BMW M3 COMPETITION</h3>
+                                <p class="textSplit">The BMW M3 blends signature M athleticism with the comfort of a
+                                    high-performance sedan. Experience three unique models, each engineered with a
+                                    distinct character and uncompromising dynamics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-inferior">
+                        <div class="textSplit-hero-inferior">
+                            <h4>510</h4>
+                            <p>HP</p>
+                        </div>
+                        <div class="textSplit-hero-inferior">
+                            <div class="same-line">
+                                <h4>3.9</h4>
+                                <p>s</p>
+                            </div>
+                            <p>0-100 km/h</p>
+                        </div>
+                        <div class="textSplit-hero-inferior">
+                            <div class="same-line">
+                                <h4 id="speedometer">0</h4>
+                                <p>km/h</p>
+                            </div>
+                            <p>Top Speed</p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="section-cards">
+                    <h2 class="textSplit-title">BMW M COMPETITION: THE ULTIMATE TRIO</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <div>
+                                <h4>THE M3 COMPETITION</h4>
+                                <span><b>Ultimate</b> Performance Sedan</span>
+                            </div>
+                            <p>The BMW M3 Competition elevates the concept of a sports sedan, perfectly blending
+                                track-ready
+                                engineering with daily versatility. Experience the ideal balance of aggressive driving
+                                dynamics and
+                                technical sophistication.</p>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <h4>THE M4 COMPETITION</h4>
+                                <span><b>Aesthetic</b> Powerhouse</span>
+                            </div>
+                            <p>The BMW M4 Competition Coupé impressively combines aesthetic appeal with a charismatic
+                                and
+                                sporty M
+                                style. It leads the trio with impressive horsepower and torque for an unmatched driving
+                                experience.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <h4>THE M5 COMPETITION</h4>
+                                <span><b>Executive</b> Sportiness</span>
+                            </div>
+                            <p>The BMW M5 Competition combines the signature M athleticism with the comfort and elegance
+                                of
+                                a
+                                business-class sedan in an impressive way. Meet a unique vehicle with a bold character
+                                and
+                                elite
+                                performance.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <section class="bmw-rotativa">
+                <div class="bmw-container">
+                    <div class="bmw-image"></div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="container-fluid">
+                    <div class="footer-content">
+                        <a href="#">COMPANY</a>
+                        <a href="#">SUSTAINABILITY</a>
+                        <a href="#">COOKIE SETTINGS</a>
+                    </div>
+                    <div class="footer-content">
+                        <a href="#">FINANCIALS</a>
+                        <a href="#">MIDIA CENTER</a>
+                        <a href="#">SITEMAP</a>
+                    </div>
+                    <div class="footer-content">
+                        <a href="#">CAREERS</a>
+                        <a href="#">PRIVACY & LEGAL</a>
+                        <a href="#">NEWSLETTER </a>
+                    </div>
+                    <div class="footer-content">
+                        <a href="#">CONTACT US</a>
+                        <a href="#">ACCESSIBILITY</a>
+                    </div>
+                    <div class="footer-follow">
+                        <p>Follow us on:</p>
+                        <div class="icons-footer">
+                            <i data-lucide="facebook"></i>
+                            <i data-lucide="youtube"></i>
+                            <i data-lucide="twitter"></i>
+                            <i data-lucide="instagram"></i>
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+                <svg class="farol farol-esquerda" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 295 135">
+                    <path fill="#fff"
+                        d="m41 2 3 1-2 1-1 1-1 1-1 1h-1l-2 1-1 1-2 2-2 1-1 1-2 2-3 1-2 1-2 1-1 2-1 2v15l1 4v5l1 7 1 4 1 5 3 9 1 3 6 8 3 2 7 4 12 2 9 3 16 2 17 3h6l3-2 9-6 7-5 12-8 4-2-1-3V55l2-2 2-3 3-3 5-3 6-4 4-3 5-3 6 3 6 2 3 1 1 3h-5l-1 1-2 2-2 2-6 4-7 6v8l3 10 4 12 4 10 6 6 4 3 6 3 17 2 22 2 22 3h8l2-1 3-2 11-8 8-7 3-4 2-1v4l-1 1v4h3l2 1v2h3l1 1 2-1 2 1-1 3-3 2-5 2-5 5-8 6-7 5-7 4h-5l-8-1h-6l-16-2-6-1-9-1-10-1-12-1-13-2-6-2-6-5-5-5-4-5-3-6-2-5-3-6-2 1-4 2-6 3-7 5-9 6-6 4-9 1h-5l-6-1-6-1-6-1-8-1-9-1-3-2h-8l-15-4-11-6-11-11-4-11-4-12-2-12-1-7-1-11V19l1-5 1-3 2-2 3-4 5-2 3 2 1-2h3l4 2V2h4l4 3V2l6-1z" />
+                </svg>
+                <svg class="farol farol-direita" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 300 133">
+                    <path fill="#fff"
+                        d="m37 116-21-14h-3v5l-1-1-2-3H7v3H1v5l6 5 6 5 10 7 6 4 5 1h9l12-1 14-1h9l13-3 19-2 11-2 8-3 7-4 7-9 5-8 2-9 7 4 10 5 11 6 6 4 10 2h10l12-2 17-2 16-3 13-2 12-5 8-5 5-9 3-9 3-10 3-9 2-14 1-8V17l-2-5-3-3-2-3-3-1h-13l-1-2V2l-3 2-2 1-2-1-2-3h-3v2h-6l-3 1 26 16 2 6-2 17-2 7-3 18-5 11-7 6-11 4-15 2-12 4-16 2h-13l-8-4-10-7-12-7-8-4V56l-1-3-3-3-15-12-6-5-2 1h-3l-3 1-1 1-4 1-3 1-3 3 6 1 8 7 7 6 4 5v8l-4 10-3 8-5 9-6 9-6 5-6 2-20 2-25 2-16 2z" />
+                </svg>
+
+                <div class="footer-texts">
+                    <div class="footer-text">
+                        <p>* The consumption and emissions values in the website refer to your
+                            geographical IP. This
+                            value might
+                            be unrealistic if you navigate using VPN or if the position of your Internet provider is
+                            imprecise.
+                            If you believe you are incorrectly geolocalized, contact your Authorized BMW Dealer to get
+                            valid
+                            consumption and emissions information in your area.</p>
+                    </div>
+                    <div class="footer-text">Copyright &copy; 2026 BMW AG, a company of the BMW Group. All rights
+                        reserved.
+                        WARNING
+                        ABOUT ILLEGAL OFFERS OF ALLEGED SHARES OF BMW AG. BMW AG got the notice that several third
+                        parties
+                        across different countries are allegedly offering shares in BMW AG. These offers are unlawful
+                        and
+                        originate neither from BMW AG nor from any of its subsidiaries.</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
