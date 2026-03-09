@@ -1,4 +1,3 @@
-// 1. Configurações Iniciais
 const frameCount = 37;
 const currentFrame = (index) => `images/bmw-rotation/image_${index}.webp`;
 
@@ -31,146 +30,145 @@ ScrollSmoother.create({
   normalizeScroll: true,
 });
 
-// HERO
-gsap.from(".hero", {
-  opacity: 0,
-  duration: 1,
-});
+function AnimatePage() {
+  // HERO
+  gsap.from(".hero", {
+    opacity: 0,
+    duration: 1,
+  });
 
-gsap.from("picture:nth-child(2)", {
-  y: 200,
-  duration: 1,
-});
+  gsap.from("picture:nth-child(2)", {
+    y: 200,
+    duration: 1,
+  });
 
-gsap.from("picture:nth-child(1)", {
-  y: -300,
-  duration: 1,
-});
+  gsap.from("picture:nth-child(1)", {
+    y: -300,
+    duration: 1,
+  });
 
-// CARDS
-gsap.from(".card", {
-  opacity: 0,
-  y: 30,
-  filter: "blur(10px)",
-  stagger: 0.3,
-  scrollTrigger: {
-    trigger: ".cards",
-    start: "10% 70%",
-    end: "100% 70%",
-    scrub: true,
-  },
-});
+  // CARDS
+  gsap.from(".card", {
+    opacity: 0,
+    y: 30,
+    filter: "blur(10px)",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".cards",
+      start: "10% 70%",
+      end: "100% 70%",
+      scrub: true,
+    },
+  });
 
-// Footer
-gsap.from("footer", {
-  y: -400,
-  immediateRender: false,
-  scrollTrigger: {
-    end: "100% 100%",
-    trigger: "footer",
-    scrub: true,
-    invalidateOnRefresh: true,
-  },
-});
+  // Footer
+  gsap.from("footer", {
+    y: -400,
+    immediateRender: false,
+    scrollTrigger: {
+      end: "100% 100%",
+      trigger: "footer",
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  });
 
-// Farol
-gsap.to(".farol path", {
-  fill: "#d2d1c8d7",
-  duration: 6,
-  scrollTrigger: {
-    trigger: "footer",
-    start: "0% 10%",
-    toggleActions: "play reverse play reverse",
-  },
-});
-
-// Overlay
-gsap.fromTo(
-  "footer",
-  { "--overlay-opacity": 1 },
-  {
-    "--overlay-opacity": 0.2,
-    duration: 4,
+  // Farol
+  gsap.to(".farol path", {
+    fill: "#d2d1c8d7",
+    duration: 6,
     scrollTrigger: {
       trigger: "footer",
       start: "0% 10%",
       toggleActions: "play reverse play reverse",
     },
-  },
-);
+  });
 
-// Text Split
-const split = SplitText.create(".textSplit", {
-  type: "lines, words, chars",
-  mask: "LINES",
-});
+  // Overlay
+  gsap.fromTo(
+    "footer",
+    { "--overlay-opacity": 1 },
+    {
+      "--overlay-opacity": 0.2,
+      duration: 4,
+      scrollTrigger: {
+        trigger: "footer",
+        start: "0% 10%",
+        toggleActions: "play reverse play reverse",
+      },
+    },
+  );
 
-gsap.from(split.chars, {
-  y: 40,
-  opacity: 0,
-  duration: 0.1,
-  stagger: 0.018,
-});
+  // Text Split
+  const split = SplitText.create(".textSplit", {
+    type: "lines, words, chars",
+    mask: "LINES",
+  });
 
-// Hero inferior
-const elementos = document.querySelectorAll(".textSplit-hero-inferior");
-elementos.forEach((elemento) => {
-  gsap.set(elemento, { visibility: "visible" });
-});
+  gsap.from(split.chars, {
+    y: 40,
+    opacity: 0,
+    duration: 0.1,
+    stagger: 0.018,
+  });
 
-const textoInferiorHero = SplitText.create(".textSplit-hero-inferior", {
-  type: "lines, words, chars",
-  mask: "lines",
-});
+  // Hero inferior
+  const elementos = document.querySelectorAll(".textSplit-hero-inferior");
+  elementos.forEach((elemento) => {
+    gsap.set(elemento, { visibility: "visible" });
+  });
 
-gsap.from(textoInferiorHero.chars, {
-  onComplete() {
-    setTimeout(ShowVelocity, 500);
-  },
-  y: 40,
-  opacity: 0,
-  duration: 0.2,
-  stagger: 0.1,
-});
+  const textoInferiorHero = SplitText.create(".textSplit-hero-inferior", {
+    type: "lines, words, chars",
+    mask: "lines",
+  });
 
-// Título
-const splitTitle = SplitText.create(".textSplit-title", {
-  type: "lines, words, chars",
-  mask: "words",
-});
+  gsap.from(textoInferiorHero.chars, {
+    onComplete() {
+      setTimeout(ShowVelocity, 500);
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.1,
+  });
 
-gsap.from(splitTitle.chars, {
-  y: 200,
-  opacity: 0,
-  duration: 0.4,
-  stagger: 0.03,
-  scrollTrigger: {
-    trigger: ".section-cards",
-    start: "0% 50%",
-    toggleActions: "play reverse play reverse",
-  },
-});
+  // Título
+  const splitTitle = SplitText.create(".textSplit-title", {
+    type: "lines, words, chars",
+    mask: "words",
+  });
 
-// Velocidade
-function ShowVelocity() {
-  const speedDisplay = document.getElementById("speedometer");
-  const targetValue = 250;
-
-  let stats = { value: 0 };
-
-  gsap.to(stats, {
-    value: targetValue,
-    duration: 2.5,
-    ease: "power2.out",
-    onUpdate: () => {
-      speedDisplay.innerHTML = Math.floor(stats.value);
+  gsap.from(splitTitle.chars, {
+    y: 200,
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.03,
+    scrollTrigger: {
+      trigger: ".section-cards",
+      start: "0% 50%",
+      toggleActions: "play reverse play reverse",
     },
   });
-}
 
-// =============================
+  // Velocidade
+  function ShowVelocity() {
+    const speedDisplay = document.getElementById("speedometer");
+    const targetValue = 250;
+
+    let stats = { value: 0 };
+
+    gsap.to(stats, {
+      value: targetValue,
+      duration: 2.5,
+      ease: "power2.out",
+      onUpdate: () => {
+        speedDisplay.innerHTML = Math.floor(stats.value);
+      },
+    });
+  }
+}
 // ANIMAÇÃO DO CARRO (SCROLL)
-// =============================
 function initAnimation() {
   const carState = { frame: 0 };
 
@@ -195,3 +193,46 @@ function initAnimation() {
     },
   });
 }
+
+// PreLoader
+gsap.set("#logo-bmw", { transformOrigin: "50% 50%", opacity: 1 });
+
+const tl = gsap.timeline({
+  onComplete() {
+    AnimatePage();
+
+    // Fade
+    gsap.to("#preloader", {
+      opacity: 0,
+      duration: 1.0,
+      ease: "power2.inOut",
+      onComplete() {
+        gsap.set("#preloader", { display: "none" });
+      },
+    });
+  },
+});
+
+// 2. Animação de Entrada
+tl.from("#logo-bmw", {
+  scale: 0,
+  opacity: 0,
+  duration: 2.0,
+  ease: "expo.out",
+});
+// 3. O Giro
+gsap.to("#logo-bmw", {
+  rotation: 360,
+  duration: 8,
+  repeat: -1,
+  ease: "none",
+});
+tl.to(
+  "#logo-bmw",
+  {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.in",
+  },
+  "+=1",
+);

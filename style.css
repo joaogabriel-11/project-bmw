@@ -595,3 +595,19 @@ footer::before {
         }
     }
 }
+
+/* Preloader */
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: #040506;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+#preloader svg {
+    width: 25vw;
+}
