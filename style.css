@@ -1,613 +1,597 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    background-color: #040506;
-    color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color: #040506;
+  color: #ffffff;
 }
 
 main {
-    position: relative;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffffd7;
+  text-decoration: none;
+  color: #ffffffd7;
 }
 
 a:hover {
-    color: #ffffff5e;
-    transition: ease-in-out .1s;
+  color: #ffffff5e;
+  transition: ease-in-out 0.1s;
 }
 
 /* Section HERO */
 .hero {
-    background-position: 50% 0%;
-    background-size: cover;
+  background-position: 50% 0%;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .bmw-image-hero {
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    height: 100%;
+    z-index: 4;
+    right: 0;
+    top: 0;
+  }
 
-    .bmw-image-hero {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
-        right: 0;
-        top: 0;
-    }
+  .bmw-image-hero img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    bottom: -5%;
+    right: 17%;
+    object-fit: contain;
+  }
 
-    .bmw-image-hero img {
-        width: 70%;
-        height: auto;
-        position: absolute;
-        bottom: -5%;
-        right: 17%;
-        object-fit: contain;
-    }
-
-    picture {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 0;
-        left: 0;
-        top: 0;
-
-        img {
-            position: relative;
-            z-index: 3;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    }
-
-
-    /* NavBar */
-    nav {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 0 7vw 0 7vw;
-        background-color: #ffffff18;
-        z-index: 6;
-
-        a:hover {
-            color: rgba(167, 167, 167, 0.733) !important;
-        }
-
-
-        .esquerda {
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            gap: 4vw;
-
-
-            .logo-m-sport {
-                z-index: 1;
-                width: auto;
-                height: 100px;
-            }
-
-            .links-nav {
-                display: flex;
-                gap: 2vw;
-            }
-        }
-
-        .direita {
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            gap: 2vw;
-
-            svg:hover {
-                color: #ffffff5e;
-                transition: ease-in-out .1s;
-                cursor: pointer;
-            }
-
-        }
-    }
-
-    .hero-superior {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        position: relative;
-        z-index: 3;
-        height: 70%;
-        padding: 4vw 8vw;
-
-        .secondary-text {
-            display: flex;
-            flex-direction: row;
-            gap: 5vw;
-            width: 35%;
-
-            .secondary-text-left {
-                font-size: 120px;
-                font-weight: 100;
-            }
-
-            .secondary-text-right {
-                display: flex;
-                flex-direction: column;
-                width: 70%;
-                gap: 2vw;
-
-                h3 {
-                    font-size: 36px;
-                }
-
-                p {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .hero-inferior {
-
-        display: flex;
-        position: relative;
-        z-index: 5;
-        justify-content: space-around;
-
-        .textSplit-hero-inferior {
-            visibility: hidden;
-            /* O GSAP vai reverter isso automaticamente na animação */
-        }
-
-        h4 {
-            font-size: 60px;
-        }
-
-        .same-line {
-            display: flex;
-            align-items: end;
-            gap: 12px;
-
-            span {
-                position: relative;
-                bottom: 20px
-            }
-        }
-    }
-}
-
-.hero:before {
-    content: "";
-    background: radial-gradient(circle, #00000000, #00000083 75%),
-        linear-gradient(180deg,
-            rgba(0, 0, 0, 0) 70%,
-            rgba(4, 5, 6, 1) 100%);
+  picture {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 3;
+    z-index: 0;
     left: 0;
     top: 0;
+
+    img {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* NavBar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 7vw 0 7vw;
+    background-color: #ffffff18;
+    z-index: 6;
+
+    a:hover {
+      color: rgba(167, 167, 167, 0.733) !important;
+    }
+
+    .esquerda {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 4vw;
+
+      .logo-m-sport {
+        z-index: 1;
+        width: auto;
+        height: 100px;
+      }
+
+      .links-nav {
+        display: flex;
+        gap: 2vw;
+      }
+    }
+
+    .direita {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+
+      svg:hover {
+        color: #ffffff5e;
+        transition: ease-in-out 0.1s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .hero-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    z-index: 3;
+    height: 70%;
+    padding: 4vw 8vw;
+
+    .secondary-text {
+      display: flex;
+      flex-direction: row;
+      gap: 5vw;
+      width: 35%;
+
+      .secondary-text-left {
+        font-size: 120px;
+        font-weight: 100;
+      }
+
+      .secondary-text-right {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        gap: 2vw;
+
+        h3 {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .hero-inferior {
+    display: flex;
+    position: relative;
+    z-index: 5;
+    justify-content: space-around;
+
+    .textSplit-hero-inferior {
+      visibility: hidden;
+      /* O GSAP vai reverter isso automaticamente na animação */
+    }
+
+    h4 {
+      font-size: 60px;
+    }
+
+    .same-line {
+      display: flex;
+      align-items: end;
+      gap: 12px;
+
+      span {
+        position: relative;
+        bottom: 20px;
+      }
+    }
+  }
 }
 
+.hero:before {
+  content: "";
+  background:
+    radial-gradient(circle, #00000000, #00000083 75%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(4, 5, 6, 1) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
 
 /* Section Cards */
 .section-cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 12vw 4vw;
+  gap: 4vw;
+  background-color: #040506;
+  z-index: 20;
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .cards {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 12vw 4vw;
-    gap: 4vw;
-    background-color: #040506;
-    z-index: 20;
+    flex-wrap: wrap;
+    gap: 6vw;
+    width: 100%;
+    justify-content: space-between;
 
-    h2 {
-        font-size: 4vw;
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 2vw;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      gap: 2vw;
+      background-color: #ffff;
+      color: #000000;
+      box-shadow: 0px 0px 100px 10px rgba(255, 0, 0, 0.25);
+      border-radius: 20px;
+
+      span {
+        font-size: 20px;
+      }
+
+      b {
+        color: red;
+      }
+
+      p {
+        font-size: 24px;
+      }
     }
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6vw;
-        width: 100%;
-        justify-content: space-between;
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            padding: 2vw;
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            gap: 2vw;
-            background-color: #FFFF;
-            color: #000000;
-            box-shadow: 0px 0px 100px 10px rgba(255, 0, 0, 0.25);
-            border-radius: 20px;
-
-            span {
-                font-size: 20px;
-            }
-
-            b {
-                color: red;
-            }
-
-            p {
-                font-size: 24px;
-            }
-
-        }
-    }
+  }
 }
-
 
 /* Section BMW */
 .bmw-rotativa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* 👈 FALTAVA ISSO */
-    background-color: #040506;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 👈 FALTAVA ISSO */
+  background-color: #040506;
+  height: 100vh;
 }
 
 .bmw-rotativa .bmw-container {
-    width: 80%;
+  width: 80%;
 }
 
 .bmw-rotativa .bmw-image {
-    background-image: url(images/bmw-rotation/image_0.png);
-    background-position: center;
-    width: 100%;
-    height: 100vw;
-    /* max-height: 80vh; */
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url(images/bmw-rotation/image_0.png);
+  background-position: center;
+  width: 100%;
+  height: 100vw;
+  /* max-height: 80vh; */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
 
 /* FOOTER */
 footer {
-    margin-top: 0;
+  margin-top: 0;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  aspect-ratio: 21 / 11;
+  background-image: url(images/footer-bmw.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .container-fluid {
     position: relative;
-    z-index: -1;
-    width: 100%;
-    aspect-ratio: 21 / 11;
-    background-image: url(images/footer-bmw.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 2;
+    display: flex;
+    padding: 4vw;
+    justify-content: space-between;
 
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      font-size: 20px;
+    }
 
-    .container-fluid {
-        position: relative;
-        z-index: 2;
+    .footer-follow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4vw;
+      font-size: 14px;
+
+      .icons-footer {
         display: flex;
-        padding: 4vw;
-        justify-content: space-between;
+        gap: 0.4vw;
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1vw;
-            font-size: 20px;
+        svg:nth-child(1):hover {
+          color: #0865fe;
+          transition: ease-in-out 0.1s;
         }
 
-        .footer-follow {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: .4vw;
-            font-size: 14px;
-
-            .icons-footer {
-                display: flex;
-                gap: .4vw;
-
-                svg:nth-child(1):hover {
-                    color: #0865FE;
-                    transition: ease-in-out .1s;
-                }
-
-                svg:nth-child(2):hover {
-                    color: #FE0301;
-                    transition: ease-in-out .1s;
-                }
-
-                svg:nth-child(3):hover {
-                    color: #0865FE;
-                    transition: ease-in-out .1s;
-                }
-
-                svg:nth-child(4):hover {
-                    color: #D83D66;
-                    transition: ease-in-out .1s;
-                }
-
-                svg:nth-child(5):hover {
-                    color: #0865FE;
-                    transition: ease-in-out .1s;
-                }
-            }
+        svg:nth-child(2):hover {
+          color: #fe0301;
+          transition: ease-in-out 0.1s;
         }
-    }
 
-    .farol {
-        position: absolute;
-        width: 12%;
-        height: auto;
-        z-index: 2;
-    }
+        svg:nth-child(3):hover {
+          color: #0865fe;
+          transition: ease-in-out 0.1s;
+        }
 
-    .farol path {
-        fill: #d2d1c800;
-    }
+        svg:nth-child(4):hover {
+          color: #d83d66;
+          transition: ease-in-out 0.1s;
+        }
 
-    .farol-esquerda {
-        left: 19.5%;
-        bottom: 52%;
+        svg:nth-child(5):hover {
+          color: #0865fe;
+          transition: ease-in-out 0.1s;
+        }
+      }
     }
+  }
 
-    .farol-direita {
-        right: 17.01%;
-        bottom: 52.36%;
-    }
+  .farol {
+    position: absolute;
+    width: 12%;
+    height: auto;
+    z-index: 2;
+  }
 
-    .footer-texts {
-        display: flex;
-        flex-direction: column;
-        padding: 4vw;
-        gap: 4vw;
-        position: absolute;
-        bottom: 10px;
-        z-index: 2;
-    }
+  .farol path {
+    fill: #d2d1c800;
+  }
 
-    .footer-text {
-        border-top: 1px solid rgba(255, 255, 255, 0.6);
-        color: rgba(255, 255, 255, 0.8);
-        font-weight: 250;
-        font-size: 16px;
-        padding-top: 2vw;
-    }
+  .farol-esquerda {
+    left: 19.5%;
+    bottom: 52%;
+  }
+
+  .farol-direita {
+    right: 17.01%;
+    bottom: 52.36%;
+  }
+
+  .footer-texts {
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    gap: 4vw;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+  }
+
+  .footer-text {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 250;
+    font-size: 16px;
+    padding-top: 2vw;
+  }
 }
 
 footer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, var(--overlay-opacity));
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, var(--overlay-opacity));
+  z-index: 1;
 }
 
 /* --- AJUSTES PARA MOBILE (Telas menores que 992px) --- */
 @media (max-width: 1024px) {
-    .hero {
+  .hero {
+    .hero-superior {
+      padding: 4vw 0;
+      flex-direction: column;
+      align-items: center;
 
-        .hero-superior {
-            padding: 4vw 0;
-            flex-direction: column;
-            align-items: center;
+      .main-text svg {
+        width: auto;
+        height: 40vw;
+      }
 
-            .main-text svg {
-                width: auto;
-                height: 40vw;
-            }
-
-            .secondary-text {
-                width: 100%;
-
-                .secondary-text-left {
-                    display: none;
-                }
-
-                .secondary-text-right {
-                    display: none;
-                }
-            }
-        }
-
-        .hero-inferior {
-            padding: 0 8vw;
-            width: 100%;
-            height: 100%;
-            justify-content: space-between;
-
-            h4 {
-                font-size: 6vw;
-            }
-
-            p {
-                font-size: 3vw;
-            }
-
-            .textSplit-hero-inferior {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .same-line {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                justify-content: center;
-                gap: 1vw;
-            }
-        }
-
-        .bmw-image-hero {
-            width: 160%;
-            left: -20%;
-            top: -4%;
-        }
-    }
-
-    .section-cards {
-
-        .cards {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    /* 6. Footer (O maior desafio pelo aspect-ratio) */
-    footer {
-        aspect-ratio: auto;
-        background-size: cover;
-        padding-bottom: 50px;
-        z-index: 1;
-    }
-
-    footer .container-fluid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8vw;
-    }
-
-    footer .footer-content {
-        width: 40%;
-
-        a {
-            font-size: 14px;
-        }
-    }
-
-    footer .footer-follow {
+      .secondary-text {
         width: 100%;
+
+        .secondary-text-left {
+          display: none;
+        }
+
+        .secondary-text-right {
+          display: none;
+        }
+      }
     }
 
-    /* Esconde os faróis no mobile para não sobrepor o texto */
-    footer .farol {
-        display: none;
+    .hero-inferior {
+      padding: 0 8vw;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+
+      h4 {
+        font-size: 6vw;
+      }
+
+      p {
+        font-size: 3vw;
+      }
+
+      .textSplit-hero-inferior {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .same-line {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        gap: 1vw;
+      }
     }
 
-    footer .footer-texts {
-        position: relative;
-        bottom: 0;
-        padding-top: 40px;
+    .bmw-image-hero {
+      width: 160%;
+      left: -20%;
+      top: -4%;
     }
+  }
 
-    footer .footer-text {
-        font-size: 12px;
+  .section-cards {
+    .cards {
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  /* 6. Footer (O maior desafio pelo aspect-ratio) */
+  footer {
+    aspect-ratio: auto;
+    background-size: cover;
+    padding-bottom: 50px;
+    z-index: 1;
+  }
+
+  footer .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8vw;
+  }
+
+  footer .footer-content {
+    width: 40%;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  footer .footer-follow {
+    width: 100%;
+  }
+
+  /* Esconde os faróis no mobile para não sobrepor o texto */
+  footer .farol {
+    display: none;
+  }
+
+  footer .footer-texts {
+    position: relative;
+    bottom: 0;
+    padding-top: 40px;
+  }
+
+  footer .footer-text {
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1440px) {
-    .hero {
-        .bmw-image-hero {
-            width: 120vw;
-            left: -10%;
-        }
+  .hero {
+    .bmw-image-hero {
+      width: 120vw;
+      left: -10%;
     }
+  }
 
-    .section-cards {
-        padding: 0;
-        margin: 0;
+  .section-cards {
+    padding: 0;
+    margin: 0;
 
-        .cards {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            gap: 2vw;
+    .cards {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      gap: 2vw;
 
-            .card {
-                width: 30%;
+      .card {
+        width: 30%;
 
-                span {
-                    font-size: 1.4vw;
-                }
-
-                p {
-                    font-size: 1.6vw;
-                }
-            }
+        span {
+          font-size: 1.4vw;
         }
+
+        p {
+          font-size: 1.6vw;
+        }
+      }
     }
+  }
 }
 
 @media (max-width: 425px) {
-    .hero {
+  .hero {
+    .hero-superior {
+      padding: 4vw 0;
+      flex-direction: column;
+      align-items: center;
 
-        .hero-superior {
-            padding: 4vw 0;
-            flex-direction: column;
-            align-items: center;
-
-            .main-text svg {
-                width: auto;
-                height: 60vw;
-            }
-        }
-
-        .bmw-image-hero {
-            width: 280%;
-            left: -70%;
-            top: -8%;
-        }
+      .main-text svg {
+        width: auto;
+        height: 60vw;
+      }
     }
 
-    .section-cards {
-        padding: 12vw 8vw;
-        gap: 4vw;
-        background-color: #040506;
-
-        h2 {
-            font-size: 3vw;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6vw;
-            width: 100%;
-            justify-content: space-between;
-
-            .card {
-                h4 {
-                    font-size: 5vw;
-                }
-
-                span {
-                    font-size: 3vw;
-                }
-
-                p {
-                    font-size: 4vw;
-                }
-
-            }
-        }
+    .bmw-image-hero {
+      width: 280%;
+      left: -70%;
+      top: -8%;
     }
+  }
+
+  .section-cards {
+    padding: 12vw 8vw;
+    gap: 4vw;
+    background-color: #040506;
+
+    h2 {
+      font-size: 3vw;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6vw;
+      width: 100%;
+      justify-content: space-between;
+
+      .card {
+        h4 {
+          font-size: 5vw;
+        }
+
+        span {
+          font-size: 3vw;
+        }
+
+        p {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
 }
 
 /* Preloader */
 
 #preloader {
-    width: 100%;
-    height: 100vh;
-    background: #040506;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #040506;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
 }
 
 #preloader svg {
-    width: 25vw;
+  width: 25vw;
 }
