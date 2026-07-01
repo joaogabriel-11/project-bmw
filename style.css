@@ -208,43 +208,47 @@ a:hover {
   background-color: #040506;
   z-index: 20;
 
-  h2 {
-    font-size: 4vw;
-  }
+}
 
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6vw;
-    width: 100%;
-    justify-content: space-between;
+.section-cards h2 {
+  font-size: 4vw;
+}
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      padding: 2vw;
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      gap: 2vw;
-      background-color: #ffff;
-      color: #000000;
-      box-shadow: 0px 0px 100px 10px rgba(255, 0, 0, 0.25);
-      border-radius: 20px;
+.section-cards .cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
 
-      span {
-        font-size: 20px;
-      }
+.section-cards .competition-card {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+  max-width: none;
+  width: auto;
+  height: auto;
+  padding: 2vw;
+  gap: 2vw;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 0px 100px 10px rgba(255, 0, 0, 0.25);
+  border-radius: 20px;
+}
 
-      b {
-        color: red;
-      }
+.section-cards .competition-card span {
+  font-size: 20px;
+}
 
-      p {
-        font-size: 24px;
-      }
-    }
-  }
+.section-cards .competition-card b {
+  color: red;
+}
+
+.section-cards .competition-card p {
+  font-size: 24px;
 }
 
 /* Section BMW */
@@ -445,13 +449,6 @@ footer::before {
     }
   }
 
-  .section-cards {
-    .cards {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
   /* 6. Footer (O maior desafio pelo aspect-ratio) */
   footer {
     aspect-ratio: auto;
@@ -502,28 +499,23 @@ footer::before {
     }
   }
 
-  .section-cards {
-    padding: 0;
-    margin: 0;
+  .section-cards .cards {
+    gap: 2vw;
+  }
 
-    .cards {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      gap: 2vw;
+  .section-cards .competition-card span {
+    font-size: clamp(16px, 1.2vw, 20px);
+  }
 
-      .card {
-        width: 30%;
+  .section-cards .competition-card p {
+    font-size: clamp(18px, 1.35vw, 22px);
+  }
+}
 
-        span {
-          font-size: 1.4vw;
-        }
-
-        p {
-          font-size: 1.6vw;
-        }
-      }
-    }
+@media (min-width: 426px) {
+  .section-cards .cards {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
@@ -556,27 +548,26 @@ footer::before {
       font-size: 3vw;
     }
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6vw;
-      width: 100%;
-      justify-content: space-between;
+  }
 
-      .card {
-        h4 {
-          font-size: 5vw;
-        }
+  .section-cards .cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 6vw;
+    width: 100%;
+    justify-content: space-between;
+  }
 
-        span {
-          font-size: 3vw;
-        }
+  .section-cards .competition-card h4 {
+    font-size: 5vw;
+  }
 
-        p {
-          font-size: 4vw;
-        }
-      }
-    }
+  .section-cards .competition-card span {
+    font-size: 3vw;
+  }
+
+  .section-cards .competition-card p {
+    font-size: 4vw;
   }
 }
 

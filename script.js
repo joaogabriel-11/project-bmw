@@ -48,7 +48,7 @@ function AnimatePage() {
   });
 
   // CARDS
-  gsap.from(".card", {
+  gsap.from(".competition-card", {
     opacity: 0,
     y: 30,
     filter: "blur(10px)",
